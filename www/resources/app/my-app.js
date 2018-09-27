@@ -2338,7 +2338,7 @@ function loadPageSupport(){
         'loginName':'',
         'email':'',
         'phone':'',
-        'service':'3', //means quikloc8.co in support page
+        'service':'17', //means quikloc8.co in support page
     };
     
     if (userInfo.FirstName) {
