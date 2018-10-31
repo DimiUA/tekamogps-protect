@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="com.sinopacific.tekamogpsprotect" version="1.1.2" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0" android-versionCode="12" ios-CFBundleVersion="12">
+<widget id="com.sinopacific.tekamogpsprotect" version="1.1.2" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0" android-versionCode="13" ios-CFBundleVersion="13">
     <name>TekamoGPS Protect</name>
     <description>
         TekamoGPS Protect tracker
