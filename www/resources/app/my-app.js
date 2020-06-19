@@ -65,6 +65,12 @@ function onDeviceReady(){
         StatusBar.styleDefault();
     }
 
+    if(window.isTablet){
+        screen.orientation.unlock('any');
+    }else{
+        screen.orientation.lock('portrait');
+    }
+
     setupPush();
 
     getPlusInfo(); 
@@ -90,7 +96,7 @@ function setupPush(){
                 //"senderID": "264121929701"                             
             },
             "browser": {
-                pushServiceURL: 'http://push.api.phonegap.com/v1/push'
+                pushServiceURL: 'https://push.api.phonegap.com/v1/push'
             },            
             "ios": {
                 "sound": true,
@@ -285,9 +291,10 @@ API_URL.URL_UPGRADE = API_DOMIAN1 + "Upgrade?MajorToken={0}&MinorToken={1}&imei=
 API_URL.URL_GET_NEW_NOTIFICATIONS = API_DOMIAN1 +"Alarms?MinorToken={0}&deviceToken={1}";
 API_URL.URL_GET_ADDR_BY_GEO1 = "https://map.quiktrak.co/reverse.php?format=json&lat={0}&lon={1}&zoom=18&addressdetails=1";
 API_URL.URL_GET_ADDR_BY_GEO2 = "https://nominatim.openstreetmap.org/reverse?format=json&lat={0}&lon={1}&zoom=18&addressdetails=1";
-API_URL.URL_SUPPORT = "http://support.quiktrak.eu/?name={0}&loginName={1}&email={2}&phone={3}&s={4}";
+API_URL.URL_SUPPORT = "https://support.quiktrak.eu/?name={0}&loginName={1}&email={2}&phone={3}&s={4}";
 
-API_URL.URL_ROUTE = "https://www.google.com/maps/dir/?api=1&destination={0},{1}"; //&travelmode=walking
+//API_URL.URL_ROUTE = "https://www.google.com/maps/dir/?api=1&destination={0},{1}"; //&travelmode=walking
+API_URL.URL_ROUTE = "maps://maps.apple.com/maps?daddr={0},{1}"; // ios link
 API_URL.URL_REFRESH_TOKEN = API_DOMIAN3 + "User/RefreshToken";
 
 
